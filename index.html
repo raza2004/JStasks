@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tasks</title>
+    <script src="./app.js" type="text/javascript"></script>
+</head>
+<body>
+    <h3>
+        Task 1(Reverse a number)
+    </h3>
+    <input type="number" id="input_number" placeholder="Enter the number">
+<input type="button" value="Find" id="input_button" >
+<script>
+function findReverse(){
+    let number = Number(document.getElementById("input_number").value);
+
+    let reverse = Number(String(number).split('').reverse().join(''));
+
+    alert("Reverse : "+reverse);
+}
+
+let button=document.getElementById("input_button");
+button.onclick=findReverse;
+</script>
+<h3>
+    Task 2
+</h3>
+<script>
+// Write a JavaScript function that checks whether a passed string is palindrome or not? 
+
+function check_Palindrome(str_entry){
+// Change the string into lower case and remove  all non-alphanumeric characters
+   var cstr = str_entry.toLowerCase().replace(/[^a-zA-Z0-9]+/g,'');
+	var ccount = 0;
+//  Check whether the string is empty or not
+	if(cstr==="") {
+		alert("Nothing found!");
+		return false;
+	}
+//  Check if the length of the string is even or odd 
+	if ((cstr.length) % 2 === 0) {
+		ccount = (cstr.length) / 2;
+	} else {
+//  If the length of the string is 1 then it becomes a palindrome
+		if (cstr.length === 1) {
+			alert("Entry is a palindrome.");
+			return true;
+		} else {
+//  If the length of the string is odd ignore middle character
+			ccount = (cstr.length - 1) / 2;
+		}
+	}
+//  Loop through to check the first character to the last character and then move next
+	for (var x = 0; x < ccount; x++) {
+// Compare characters and drop them if they do not match 
+		if (cstr[x] != cstr.slice(-1-x)[0]) {
+			alert("Entry is not a palindrome.");
+			return false;
+		}
+	}
+	alert("The entry is a palindrome.");
+    prompt("Enter a word")
+    // Task 3
+    
+let possibleCombinations = (str) =>{
+    let combinations = [];
+      for(let i = 0 ;i < str.length; i++)
+    {
+        for(let j = i + 1; j< str.length + 1; j++)
+        {
+            combinations.push(str.slice(i , j));
+        }
+    }
+   return combinations;
+}
+console.log(possibleCombinations('Dog'));}
+// Task 4
+
+function alpha(str) {
+	var arr = str.split(""); // splits the string
+	res = arr.sort().join(""); // sort the array and joins to form a string
+	return res; // returns the result
+}
+console.log("webmaster'");
+console.log(alpha("webmaster'"));
+</script>
+<!-- TAsk 5 -->
+<input id = "input" type="text" name="input"/> 
+        <button onclick="capitalizeFLetter()"> 
+            Click to capitalize
+        </button> 
+        <h3 id = "div" style="color: green">
+        </h3>
+            
+        <script> 
+         
+        function capitalizeFLetter() {
+          var input = document.getElementById("input");
+          var x = document.getElementById("div");
+          var string = input.value;
+          x.innerHTML = string[0].toUpperCase() + 
+            string.slice(1);
+        }
+        function findLongestWord(str) {
+  var strSplit = str.split(' ');
+  var longestWord = 0;
+  for(var i = 0; i < strSplit.length; i++){
+    if(strSplit[i].length > longestWord){
+	longestWord = strSplit[i].length;
+     }
+  }
+  return longestWord;
+}
+findLongestWord("Web and App Development");
+        </script> 
+</script>
+
+</body>
+</html>
+
