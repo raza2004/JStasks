@@ -159,6 +159,30 @@ findLongestWord("Web and App Development");
                 }
                 ​
                 console.log(check_prime(37))</script>
+                <script>
+                    function Second_Great_Low(arr_num)            
+                    //task 10
+{
+  arr_num.sort(function(x,y)
+           {
+           return x-y;
+           });
+  var uniqa = [arr_num[0]];
+  var result = [];
+  
+  for(var j=1; j < arr_num.length; j++)
+  {
+    if(arr_num[j-1] !== arr_num[j])
+    {
+      uniqa.push(arr_num[j]);
+    }
+  }
+    result.push(uniqa[1],uniqa[uniqa.length-2]);
+  return result.join(',');
+  }
+
+console.log(Second_Great_Low([1,2,3,4,5]));
+                </script>
 </script>
 
 </body>
