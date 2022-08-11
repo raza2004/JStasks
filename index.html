@@ -116,6 +116,49 @@ console.log(alpha("webmaster'"));
 }
 findLongestWord("Web and App Development");
         </script> 
+        <script>
+        function vow_count(str1)               //task 7
+            {
+              var vowel_list = 'aeiouAEIOU';
+              var vcount = 0;
+              
+              for(var x = 0; x < str1.length ; x++)
+              {
+                if (vowel_list.indexOf(str1[x]) !== -1)
+                {
+                  vcount += 1;
+                }
+              
+              }
+              return vcount;
+            }
+            console.log(vow_count("The quick brown fox"));</script>
+            <script>
+                    //  task 8//
+            function check_prime(n)
+                {
+                ​
+                  if (n===1)
+                  {
+                    return false;
+                  }
+                  else if(n === 2)
+                  {
+                    return true;
+                  }else
+                  {
+                    for(var x = 2; x < n; x++)
+                    {
+                      if(n % x === 0)
+                      {
+                        return false;
+                      }
+                    }
+                    return true;  
+                  }
+                }
+                ​
+                console.log(check_prime(37))</script>
 </script>
 
 </body>
